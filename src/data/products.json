@@ -1,0 +1,18 @@
+[
+    {
+      "image": "./src/img/ref-coca-200ml.jpg",
+      "name": "Coca-Cola 200 ml",
+      "price": 10.00
+    },
+    {
+      "image": "./src/img/ref-pepsi-200ml.jpg",
+      "name": "Pepsi 200 ml",
+      "price": 8.00
+    },
+    {
+      "image": "./src/img/ref-guarana-200ml.jpg",
+      "name": "Guaraná 200 ml",
+      "price": 9.00
+    }
+  ]
+  
