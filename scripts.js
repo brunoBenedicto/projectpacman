@@ -79,13 +79,35 @@ function openModal(totalPrice, products) {
 });
 
 
+function addQuantityButtonListeners() {
+  var clickSound1 = document.getElementById('clickButton+');
+  var clickSound2 = document.getElementById('clickButton-');
+  var quantityButtons = document.querySelectorAll('.quantity-button');
+  quantityButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var input = button.parentElement.querySelector('.quantity-input');
+      var value = parseFloat(input.value);
+      if (button.innerText === '-' && value > 0) {
+        input.value = value - 1;
+        console.log(input.value)
+        clickSound2.play();
+      } else if (button.innerText === '+') {
+        input.value = value + 1;
+        clickSound1.play();
+        console.log(input.value)
+        console.log(typeof(input.value))
+      }
+    });
+  });
+}
+
 function loadProducts() {
   fetch('./src/data/products.json')
   .then(response => response.json())
   .then(data => {
       data.forEach(product => {
           var card = document.createElement('div');
-          card.classList.add('card', 'row', 'm-3');
+          card.classList.add('card', 'col-9','col-md-4', 'm-3'); // Adicionando a classe 'col-4'
           card.innerHTML = `
               <div class="col-sm">
                   <img src="${product.image}" alt="${product.name}">
@@ -96,7 +118,7 @@ function loadProducts() {
               <div class="col-sm">
                   <p>R$ <span class="price">${product.price.toFixed(2)}</span></p>
               </div>
-              <div class="contador col-sm container">
+              <div class="contador col-sm container ">
                   <div class="input-group container">
                       <div class="input-group-prepend container">
                           <button class="quantity-button btn btn-outline-secondary" type="button">-</button>
@@ -106,11 +128,15 @@ function loadProducts() {
                   </div>
               </div>
           `;
-          document.querySelector('.container').appendChild(card);
+          document.getElementById('product-container').appendChild(card); // Modificado para selecionar o container correto
       });
+      // Adiciona event listeners aos botões de quantidade após carregar os produtos
+      addQuantityButtonListeners();
   })
   .catch(error => console.error('Erro ao carregar os produtos:', error));
 }
+
+
 
 // Chame a função para carregar os produtos ao carregar a página
 window.onload = loadProducts;

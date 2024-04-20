@@ -1,112 +1,133 @@
 @font-face {
-    font-family: 'pacman';
-    src: url('./src/fonts/PAC-FONT.TTF'); /* Adicione o caminho para o arquivo da fonte */
-  }
-  @font-face {
-    font-family: 'pixelizado';
-    src: url('./src/fonts/AtariST8x16SystemFont.ttf'); /* Adicione o caminho para o arquivo da fonte */
-  }
+  font-family: 'pacman';
+  src: url('./src/fonts/PAC-FONT.TTF'); /* Adicione o caminho para o arquivo da fonte */
+}
+@font-face {
+  font-family: 'pixelizado';
+  src: url('./src/fonts/AtariST8x16SystemFont.ttf'); /* Adicione o caminho para o arquivo da fonte */
+}
 
 
 body {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Press Start 2P', cursive;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
-  .header{
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-  }
-  .header img {
-    max-width: 100%;
-  }
+.header{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.header img {
+  max-width: 100%;
+}
+
+.subtitulo{
+  font-family: 'pixelizado';
+  color: yellow;
+  max-width: 100%;
+}
+
+
+#product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+background-color: #000;
+color: #fff;
+font-family: 'pixelizado';
+padding: 20px;
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items:center;
+border: #0032FE 4px groove;
+border-radius: 30px;
+width: calc(33.33% - 20px); /* Definindo a largura de cada card para ocupar 1/3 da largura do container */
+margin-right: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.contador{
+  font-family: 'pixelizado';
+  font-size: 25px;
   
-  .subtitulo{
-    font-family: 'pixelizado';
-    color: yellow;
-    max-width: 100%;
-  }
+}
+.contador input[type="number"]{
+  background-color: #000;
+  border: none;
+  color: #fff;
+  max-width: 50px;
+  min-width: 40px;
+  text-align: center;
+}
+.contador button{
+  font-family: 'pixelizado';
+  color: #fff;
+  border: none;
+}
+.titulo-card{
+  font-size: 32px;
+}
+.preco-card{
+  font-size: 24px;
+}
 
 
-  .card {
-    background-color: #000;
-    color: #fff;
-    font-family: 'pixelizado';
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    border: #0032FE 4px groove;
-    border-radius: 30px;
-    margin-inline: 20px;
-    min-width: 90%;
-  }
-  .card img {
-    max-width: 200px;
-    border-radius: 20px;
-  }
+.buy-button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'pixelizado';
+  font-size: 18px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-  .contador{
-    font-family: 'pixelizado';
-    
-  }
-  .contador input[type="number"]{
-    background-color: #000;
-    border: none;
-    color: #fff;
-    max-width: 50px;
-    min-width: 40px;
-    text-align: center;
-  }
-  .contador button{
-    font-family: 'pixelizado';
-    color: #fff;
-    border: none;
-  }
-  
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-  .buy-button {
-    background-color: #f00;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .modal-content {
-    background-color: #000;
-    border: 1px solid yellow;
-    width: 50%;
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 10px;
-  }
+.modal-content {
+  background-color: #000;
+  border: 1px solid yellow;
+  width: 50%;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
 
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
+
+
+
