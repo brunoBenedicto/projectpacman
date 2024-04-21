@@ -1,23 +1,23 @@
 [
     {
+      "image": "./src/img/achocolatado.jpg",
+      "name": "Achocolatado",
+      "price": 2.50
+    },
+    {
+      "image": "./src/img/Biscoito Treloso.jpg",
+      "name": "Biscoito Treloso",
+      "price": 1.50
+    },
+    {
+      "image": "./src/img/ref-coca-200ml.jpg",
+      "name": "Coca-Cola 250ml",
+      "price": 3.50
+    },
+    {
       "image": "./src/img/ref-quarana-200ml.jpg",
-      "name": "garana 200 ml",
-      "price": 10.00
-    },
-    {
-      "image": "./src/img/ref-pepsi-200ml.jpg",
-      "name": "Pepsi 200 ml",
-      "price": 8.00
-    },
-    {
-      "image": "./src/img/ref-guarana-200ml.jpg",
-      "name": "Guaraná 200 ml",
-      "price": 9.00
-    },
-    {
-      "image": "./src/img/ref-quarana-200ml.jpg",
-      "name": "garana 200 ml",
-      "price": 10.00
+      "name": "Cremosinho",
+      "price": 2.00
     },
     {
       "image": "./src/img/ref-pepsi-200ml.jpg",
