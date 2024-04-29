@@ -1,63 +1,67 @@
 [
     {
-      "image": "./src/img/achocolatado.jpg",
-      "name": "Achocolatado",
-      "price": 2.50
+      "image": "TestPix",
+      "name": "testar pix",
+      "price": 0.01
     },
     {
-      "image": "./src/img/Biscoito Treloso.jpg",
-      "name": "Biscoito Treloso",
-      "price": 1.50
-    },
-    {
-      "image": "./src/img/ref-coca-200ml.jpg",
-      "name": "Coca-Cola 250ml",
-      "price": 3.50
-    },
-    {
-      "image": "./src/img/ref-quarana-200ml.jpg",
-      "name": "Cremosinho",
+      "image":"src/img/coca-cola.png",
+      "name":"Coca Cola 250 mL",
       "price": 2.00
     },
     {
-      "image": "./src/img/ref-pepsi-200ml.jpg",
-      "name": "Pepsi 200 ml",
-      "price": 8.00
+      "image":"src/img/biscoito.png",
+      "name":"Biscoito Treloso",
+      "price": 1.50
     },
     {
-      "image": "./src/img/ref-guarana-200ml.jpg",
-      "name": "Guaraná 200 ml",
-      "price": 9.00
+      "image":"src/img/cremosinho.png",
+      "name":"Cremosinho",
+      "price": 2.00
     },
     {
-      "image": "./src/img/ref-quarana-200ml.jpg",
-      "name": "garana 200 ml",
+      "image":"src/img/guaraná.png",
+      "name":"Guaraná 200mL",
+      "price": 2.00
+    },
+    {
+      "image":"src/img/mac n cheese.png",
+      "name":"Mac'n Cheese",
       "price": 10.00
     },
     {
-      "image": "./src/img/ref-pepsi-200ml.jpg",
-      "name": "Pepsi 200 ml",
-      "price": 8.00
+      "image":"src/img/miojo.png",
+      "name":"Miojo",
+      "price": 1.50
     },
     {
-      "image": "./src/img/ref-guarana-200ml.jpg",
-      "name": "Guaraná 200 ml",
-      "price": 9.00
+      "image":"src/img/paçoca.png",
+      "name":"Paçoca",
+      "price": 0.50
     },
     {
-      "image": "./src/img/ref-quarana-200ml.jpg",
-      "name": "garana 200 ml",
-      "price": 10.00
+      "image":"src/img/teen.png",
+      "name":"TEEN",
+      "price": 2.50
     },
     {
-      "image": "./src/img/ref-pepsi-200ml.jpg",
-      "name": "Pepsi 200 ml",
-      "price": 8.00
+      "image":"src/img/hamburguer.png",
+      "name":"Hamburguer",
+      "price": 7.50
     },
     {
-      "image": "./src/img/ref-guarana-200ml.jpg",
-      "name": "Guaraná 200 ml",
-      "price": 7.00
+      "image":"src/img/suco.png",
+      "name":"Suco",
+      "price": 2.00
+    },
+    {
+      "image":"src/img/cup noodles.png",
+      "name":"Cup Noodles",
+      "price": 6.00
     }
+    
   ]
+
+
+  
   

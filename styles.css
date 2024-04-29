@@ -38,6 +38,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
+  height: 70vh; 
+  overflow: auto;
 }
 
 .card {
@@ -154,6 +156,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+.qrPacman{
+  width: 300px;
+  max-width: 95%;
 }
 
 

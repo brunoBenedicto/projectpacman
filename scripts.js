@@ -2,7 +2,6 @@ function playIntro() {
   var introSound = document.getElementById('soundIntro');
   if (introSound) {
     introSound.play().catch(function(error) {
-      // Trate qualquer erro que ocorra ao tentar reproduzir o som
       console.error('Erro ao reproduzir o som intro:', error);
     });
   } else {
@@ -30,11 +29,15 @@ function closeModal() {
 
 document.getElementById("pay-button").addEventListener("click", function() {
   var clickSoundPay = document.getElementById('paySound');
+  // Gerar o Pix copia e cola
+  var pix = 'SUA CHAVE DO PIX AQUI';
+  // Exibir o Pix copia e cola no elemento <div>
+  document.getElementById('pix-copia-col paste').innerText = pix;
   clickSoundPay.play()
   // Aqui você pode adicionar a lógica para processar o pagamento
   // Por exemplo, você pode redirecionar o usuário para uma página de pagamento ou exibir uma mensagem de confirmação
-  alert("Pagamento processado com sucesso!");
-  closeModal();
+  //alert("Pagamento processado com sucesso!");
+  //closeModal();
 });
 
 function addQuantityButtonListeners() {
