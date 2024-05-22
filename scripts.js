@@ -28,16 +28,47 @@ function closeModal() {
 }
 
 document.getElementById("pay-button").addEventListener("click", function() {
+  console.log('Botão "Pagar" clicado');
   var clickSoundPay = document.getElementById('paySound');
-  // Gerar o Pix copia e cola
-  var pix = 'SUA CHAVE DO PIX AQUI';
-  // Exibir o Pix copia e cola no elemento <div>
-  document.getElementById('pix-copia-col paste').innerText = pix;
-  clickSoundPay.play()
-  // Aqui você pode adicionar a lógica para processar o pagamento
-  // Por exemplo, você pode redirecionar o usuário para uma página de pagamento ou exibir uma mensagem de confirmação
-  //alert("Pagamento processado com sucesso!");
-  //closeModal();
+  clickSoundPay.play();
+
+  // Lista de produtos selecionados
+  var selectedProducts = [];
+  var cards = document.querySelectorAll('.card');
+  cards.forEach(function(card) {
+      var productName = card.querySelector('.titulo-card').innerText;
+      var quantity = parseInt(card.querySelector('.quantity-input').value);
+      if (quantity > 0) {
+          selectedProducts.push({ name: productName, quantity: quantity });
+      }
+  });
+
+  // Valor total da compra
+  var totalPrice = parseFloat(document.getElementById("total-price").innerText);
+
+
+  console.log('Enviando solicitação para o servidor com os seguintes dados:');
+console.log('Produtos:', selectedProducts);
+console.log('Total:', totalPrice);
+
+
+  // Envia os detalhes da compra para a API
+  fetch('http://localhost:3000/pagamento', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ produtos: selectedProducts, total: totalPrice })
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log(data.message);
+      alert(data.message); // Mostra uma mensagem de sucesso
+  })
+  .catch(error => {
+      console.error('Erro ao processar o pagamento:', error);
+      alert('Erro ao processar o pagamento. Por favor, tente novamente mais tarde.');
+  });
 });
 
 function addQuantityButtonListeners() {
